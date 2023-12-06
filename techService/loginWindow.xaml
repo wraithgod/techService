@@ -8,13 +8,24 @@
         Title="loginWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-
-
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Авторизация" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Логин: "/>
+            <TextBox x:Name="loginBox" Height="15" Width="125"></TextBox>
+        </StackPanel>        
+        
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Пароль: "/>
+            <PasswordBox x:Name="passBox" Height="15" Width="125"></PasswordBox>
+        </StackPanel>
+        <Button Grid.Row="3" Width="100" Height="25" Click="auth_Click">Войти</Button>
     </Grid>
 </Window>

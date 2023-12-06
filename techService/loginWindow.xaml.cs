@@ -19,9 +19,27 @@ namespace techService
     /// </summary>
     public partial class loginWindow : Window
     {
+        class User {
+            string login;
+            string password;
+            bool isCorrect;
+        }
         public loginWindow()
         {
             InitializeComponent();
         }
+
+        private void auth_Click(object sender, RoutedEventArgs e)
+        {
+            string login = loginBox.Text.ToString();
+            string password = passBox.ToString();
+
+            if () {
+                Window mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
+
+        }        
     }
 }
