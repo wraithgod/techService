@@ -35,12 +35,11 @@ namespace techService
         private void auth_Click(object sender, RoutedEventArgs e)
         {
             try {
-                AppData.
-                techServiceEntities entities = new techServiceEntities();
+                
                 string login = loginBox.Text.ToString();
-                string password = passBox.ToString();
+                string password = passBox.Password;
 
-                var currentUser = entities.Users.FirstOrDefault((u) => u.login == login && u.password == password);
+                var currentUser = AppData.db.Users.FirstOrDefault((u) => u.login == login && u.password == password);
 
                 if (currentUser == null)
                 {
